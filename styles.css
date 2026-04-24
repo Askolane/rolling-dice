@@ -208,7 +208,9 @@ select {
 
 .board-wrap {
   position: relative;
-  min-height: min(72vw, 410px);
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  min-height: 0;
   border: 1px solid rgba(255, 255, 255, 0.74);
   border-radius: 8px;
   overflow: hidden;
@@ -225,8 +227,9 @@ select {
 .board {
   position: relative;
   width: 100%;
-  height: min(72vw, 410px);
-  min-height: 330px;
+  height: 100%;
+  min-height: 0;
+  aspect-ratio: 1 / 1;
   transform: translateZ(0);
 }
 
@@ -284,6 +287,9 @@ select {
 .tile {
   width: calc(var(--cell) - 6px);
   height: calc(var(--cell) - 6px);
+  min-height: 0;
+  padding: 0;
+  aspect-ratio: 1 / 1;
   border: 1px solid rgba(80, 95, 112, 0.08);
   border-radius: 7px;
   background: var(--tile);
@@ -586,11 +592,11 @@ textarea {
 }
 
 body.editor-mode .board-wrap {
-  min-height: min(80vw, 420px);
+  min-height: 0;
 }
 
 body.editor-mode .board {
-  height: min(80vw, 420px);
+  height: 100%;
 }
 
 body.editor-mode .tile {
